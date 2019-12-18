@@ -1,0 +1,29 @@
+RewriteEngine on
+
+RewriteRule ^accueil$ src/index.php
+
+RewriteRule ^preAccueil$ preAccueil.php
+RewriteRule ^errorConnexion$ index.php?connexion=0
+
+RewriteRule ^GestCompte$ src/view/compte/liste.php
+RewriteRule ^GestClient$ src/view/client/liste.php
+RewriteRule ^update$ src/view/update.php
+RewriteRule ^updateE$ src/view/update.php?ok=0
+RewriteRule ^updateS$ src/view/update.php?ok=1
+RewriteRule ^GestClientS$ src/view/client/liste.php?ok=1
+RewriteRule ^GestClientE$ src/view/client/liste.php?ok=0
+
+RewriteRule ^newCompte$ src/view/compte/add.php
+RewriteRule ^newCompteS$ src/view/compte/add.php?ok=1
+RewriteRule ^newCompteE$ src/view/compte/add.php?ok=0
+
+RewriteRule ^deconnexion$ src/controller/userController.php?deconnexion=1
+RewriteRule ^compteC$ src/controller/compteController.php
+RewriteRule ^clientC$ src/controller/clientController.php
+
+RewriteRule ^userC$ src/controller/userController.php
+RewriteRule ^newUser$ src/view/user/add.php
+RewriteRule ^newUserS$ src/view/user/add.php?ok=1
+RewriteRule ^newUserE$ src/view/user/add.php?ok=0
+RewriteRule ^newUserC$ src/view/user/add.php?court=1
+RewriteRule ^listeUser$ src/view/user/liste.php
